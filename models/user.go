@@ -7,6 +7,7 @@ type Address struct {
 }
 
 type User struct {
+	Id      int     `json:"id" bson:"id"`
 	Name    string  `json:"name" bson:"user_name"`
 	Email   string  `json:"email" bson:"user_email"`
 	Age     int     `json:"age" bson:"user_age"`
