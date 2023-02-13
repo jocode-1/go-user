@@ -21,10 +21,14 @@ func NewUserService(usercollection *mongo.Collection, ctx context.Context) UserS
 
 func (u *UserServiceImpl) CreateUser(user *models.User) error {
 
-	return nil
+	_, err := u.usercollection.InsertOne(u.ctx, user)
+
+	return err
 }
 
-func (u *UserServiceImpl) GetUser(name *string) (*models.User, error) {
+func (u *UserServiceImpl) GetUser(id *int) (*models.User, error) {
+
+	var user *models.User
 
 	return nil, nil
 }
